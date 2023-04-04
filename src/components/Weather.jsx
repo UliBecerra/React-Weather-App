@@ -19,7 +19,7 @@ function Weather({weather, temp, handleSubmit, message, theme, handleTheme }) {
       <section className={ `grid grid-cols-two grid-rows-tre   bg-cover  ` + (theme ? "text-t-light bg-[url('/public/images/rectangle/light.png')]" : "text-t-dark bg-[url('/public/images/rectangle/dark.png')]")  }>
       
       
-        <div className='capitalize col-start-1 row-start-1 row-end-2 col-end-2 flex  items-center pl-4 py-0'>
+        <div className='capitalize col-start-1 row-start-1 row-end-2 col-end-2 flex  items-center pl-4 pt-2'>
           <h1 className='text-[65px] '>{isCelsius ? temp.celsius : temp.fahrenheit}°</h1>
         </div>
         
@@ -60,7 +60,7 @@ function Weather({weather, temp, handleSubmit, message, theme, handleTheme }) {
           
         </div>
 
-        <div className='capitalize col-start-1 row-start-4 row-end-5 text-[20px] pt-0 pb-5 pl-7  font-bold '>
+        <div className='capitalize col-start-1 row-start-4 row-end-5 text-[20px] pt-3 pb-5 pl-7  font-bold '>
         <h3>{weather.name} {weather.sys.country}</h3>
         
         </div>
