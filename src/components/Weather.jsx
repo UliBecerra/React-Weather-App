@@ -23,8 +23,8 @@ function Weather({weather, temp, handleSubmit, message, theme, handleTheme }) {
         </div>
         
 
-        <div className='capitalize col-start-2 row-start-1 row-end-3 col-end-3' >
-          <img src={`/public/images/${weather.weather[0].icon}.png`} alt="" />
+        <div className={`capitalize col-start-2 row-start-1 row-end-3 col-end-3 bg-[url("/public/images/rectangle/${weather.weather[0].icon}.png")] bg-cover`} >
+          <img src={'./'} alt="" />
           <img src={`/public/images/rectangle/${weather.weather[0].icon}.png`} alt="" />
           <img src={`/public/images/icons/${weather.weather[0].icon}.png`} alt="" />
         </div> 
