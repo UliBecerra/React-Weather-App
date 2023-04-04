@@ -26,7 +26,14 @@ function Weather({weather, temp, handleSubmit, message, theme, handleTheme }) {
 
         <div className={`capitalize col-start-2 row-start-1 row-end-3 col-end-3  ")]`} >
           
-        <div className={` min-h-[150px] min-w-[150px]  bg-cover ` + ( weather.weather[0].icon ? (`bg-[url("/public/images/icons/${weather.weather[0].icon}.png")]`) : ' bg-[url("/public/images/icons/01d.png")] ')}>
+        <div className={` min-h-[150px] min-w-[150px]  bg-cover ` + (
+        ( (weather.weather[0].icon === '01d' || weather.weather[0].icon === '01n') ? (`bg-[url("/public/images/icons/01d.png")]`) :
+        (weather.weather[0].icon === '02d' || weather.weather[0].icon === '02n') ? (`bg-[url("/public/images/icons/02d.png")]`) :
+        (weather.weather[0].icon === '03d' || weather.weather[0].icon === '03n') ? (`bg-[url("/public/images/icons/03d.png")]`) :
+        (weather.weather[0].icon === '04d' || weather.weather[0].icon === '04n') ? (`bg-[url("/public/images/icons/04d.png")]`) :
+        (weather.weather[0].icon === '05d' || weather.weather[0].icon === '05n') && (`bg-[url("/public/images/icons/01d.png")]`) )
+        )
+        }>
           {/* <img src={`/public/images/icons/01n.png`} alt="" /> */}
         </div>
 
