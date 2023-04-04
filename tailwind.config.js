@@ -16,7 +16,9 @@ export default {
       backgroundImage: {
         'dark': 'radial-gradient(50% 50% at 50% 50%, #53388F 0%, #2F2958 100%)',
         'light': 'radial-gradient(50% 50% at 50% 50%, #D5F3FF 0%, #51B4E8 100%)',
-        'darkTemp': 'linear-gradient( to right, #E5F2FF 0%,  #D5F3FF 97.4%  )  '
+        'darkTemp': 'linear-gradient( to right, #E5F2FF 0%,  #D5F3FF 97.4%  )',
+        '04n': 'url(public/images/icons/04n.png)',
+        '01n': 'url(public/images/icons/01n.png)',
         
       },
       backgroundColor:{
