@@ -15,20 +15,23 @@ function Weather({weather, temp, handleSubmit, message, theme, handleTheme }) {
       <Search  handleSubmit={handleSubmit} message={message} handleTheme={handleTheme} theme={theme}/>
 
       
-      <section className={ `grid grid-cols-two grid-rows-tre   bg-cover mr-[1%] drop-shadow rounded-2xl border-l-[100%] border-b-[100%] border-t-0 border-r-[75%]  mt-[50px] ` + (theme ? "text-t-light bg-[url('/public/images/rectangle/light.png')]" : "text-t-dark bg-[url('/public/images/rectangle/dark.png')]")  }>
+      <section className={ `grid grid-cols-two grid-rows-tre   bg-cover  ` + (theme ? "text-t-light bg-[url('/public/images/rectangle/light.png')]" : "text-t-dark bg-[url('/public/images/rectangle/dark.png')]")  }>
       
       
-        <div className='capitalize col-start-1 row-start-1 row-end-2 col-end-2 flex  items-center pl-4 py-4'>
-          <h1 className='text-[75px] '>{isCelsius ? temp.celsius : temp.fahrenheit}°</h1>
+        <div className='capitalize col-start-1 row-start-1 row-end-2 col-end-2 flex  items-center pl-4 py-0'>
+          <h1 className='text-[65px] '>{isCelsius ? temp.celsius : temp.fahrenheit}°</h1>
         </div>
         
 
-        <div className={`capitalize col-start-2 row-start-1 row-end-3 col-end-3 bg-[url('/public/images/rectangle/${weather.weather[0].icon}.png')] bg-cover`} >
+        <div className={`capitalize col-start-2 row-start-1 row-end-3 col-end-3  ")]`} >
+          
+        <div className={` min-h-[150px] min-w-[150px] bg-[url(/public/images/icons/${weather.weather[0].icon}.png)] bg-cover`}>
+        </div>
+
       
-          <img src={`/public/images/icons/${weather.weather[0].icon}.png`} alt="" />
         </div> 
 
-        <div className={`capitalize col-start-1 row-start-2 row-end-3 text-[13px]  pl-6 ` + (theme ? 'text-i-light': 'text-i-dark')}>
+        <div className={`capitalize col-start-1 row-start-2 row-end-3 text-[13px]  pl-6 pt-0` + (theme ? 'text-i-light': 'text-i-dark')}>
         <div>
             VIENTO {weather.wind.speed} m/s
           </div>
@@ -39,9 +42,10 @@ function Weather({weather, temp, handleSubmit, message, theme, handleTheme }) {
           <div>
             <h5>PRESIÓN {weather.main.pressure} hPa</h5>
           </div>
+          
         </div>
 
-        <div className='capitalize col-start-1 row-start-4 row-end-5 text-[20px] pt-2 pb-5 pl-7  font-bold '>
+        <div className='capitalize col-start-1 row-start-4 row-end-5 text-[20px] pt-0 pb-5 pl-7  font-bold '>
         <h3>{weather.name} {weather.sys.country}</h3>
         
         </div>
