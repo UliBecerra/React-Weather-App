@@ -27,7 +27,7 @@ function Weather({weather, temp, handleSubmit, message, theme, handleTheme }) {
         <div className={`capitalize col-start-2 row-start-1 row-end-3 col-end-3  ")]`} >
           
         <div className={` min-h-[150px] min-w-[150px]  bg-cover bg-[url("/public/images/icons/${weather.weather[0].icon}.png")]`}>
-          <img src={`/public/images/icons/${weather.weather[0].icon}.png`} alt="" />
+          <img src={`./assets/img/${weather.weather[0].icon}.png`} alt="" />
         </div>
 
       
@@ -35,7 +35,7 @@ function Weather({weather, temp, handleSubmit, message, theme, handleTheme }) {
  
         <div className={`capitalize col-start-1 row-start-2 row-end-3 text-[13px]  pl-6 pt-0` + (theme ? 'text-i-light': 'text-i-dark')}>
         <div>
-            VIENTO {weather.wind.speed} m/s  ${weather.weather[0].icon}
+            VIENTO {weather.wind.speed} m/s  
           </div>
           <div>
             NUBES {weather.clouds.all}%
