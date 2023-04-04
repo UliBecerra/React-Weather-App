@@ -42,7 +42,7 @@ function Weather({weather, temp, handleSubmit, message, theme, handleTheme }) {
           </div>
           
           <div>
-            <h5>PRESIÓN {weather.main.pressure} hPa </h5>
+            <h5>PRESIÓN {weather.main.pressure} hPaP </h5>
           </div>
           
         </div>
