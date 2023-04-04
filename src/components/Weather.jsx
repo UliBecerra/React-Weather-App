@@ -27,7 +27,7 @@ function Weather({weather, temp, handleSubmit, message, theme, handleTheme }) {
         <div className={`capitalize col-start-2 row-start-1 row-end-3 col-end-3  ")]`} >
           
         <div className={` min-h-[150px] min-w-[150px] bg-[url("/public/images/icons/${bgIcon}.png")] bg-cover`}>
-          <img src={`/public/images/icons/${bgIcon}.png`} alt="" />
+          <img src={`https://github.com/UliBecerra/React-Weather-App/blob/main/public/images/icons/${bgIcon}.png`} alt="" />
         </div>
 
       
