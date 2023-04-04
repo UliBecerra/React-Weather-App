@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import Search from './Search';
 import './Weather.css'
+  
 function Weather({weather, temp, handleSubmit, message, theme, handleTheme }) {
   const [isCelsius, setIsCelsius] = useState(true);
   const handleTempEscal = () =>{
     setIsCelsius(!isCelsius)
   }
-  
-  
+
+  let bgIcon = weather.weather[0].icon
  
   return (
     <div className={  theme ? 'bg-light grid place-content-center min-h-screen justify-center items-center font-lato   ' : 'bg-dark grid place-content-center min-h-screen justify-center items-center font-lato '}>
@@ -25,7 +26,8 @@ function Weather({weather, temp, handleSubmit, message, theme, handleTheme }) {
 
         <div className={`capitalize col-start-2 row-start-1 row-end-3 col-end-3  ")]`} >
           
-        <div className={` min-h-[150px] min-w-[150px] bg-[url("https://raw.githubusercontent.com/UliBecerra/React-Weather-App/main/public/images/${weather.weather[0].icon}.png")] bg-cover`}>
+        <div className={` min-h-[150px] min-w-[150px] bg-[url("/public/images/icons/${bgIcon}.png")] bg-cover`}>
+          <img src={`/public/images/icons/${bgIcon}.png`} alt="" />
         </div>
 
       
