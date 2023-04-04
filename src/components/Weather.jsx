@@ -25,7 +25,7 @@ function Weather({weather, temp, handleSubmit, message, theme, handleTheme }) {
 
         <div className={`capitalize col-start-2 row-start-1 row-end-3 col-end-3  ")]`} >
           
-        <div className={` min-h-[150px] min-w-[150px] bg-${weather.weather[0].icon} bg-cover`}>
+        <div className={` min-h-[150px] min-w-[150px] bg-[url('/public/images/${weather.weather[0].icon}.png')] bg-cover`}>
         </div>
 
       
