@@ -26,7 +26,7 @@ function Weather({weather, temp, handleSubmit, message, theme, handleTheme }) {
 
         <div className={`capitalize col-start-2 row-start-1 row-end-3 col-end-3  ")]`} >
           
-        <div className={` min-h-[150px] min-w-[150px]  bg-cover bg-[url("/public/images/icons/01n.png")]`}>
+        <div className={` min-h-[150px] min-w-[150px]  bg-cover ` + ( weather.weather[0].icon ? (`bg-[url("/public/images/icons/${weather.weather[0].icon}.png")]`) : ' bg-[url("/public/images/icons/01d.png")] ')}>
           {/* <img src={`/public/images/icons/01n.png`} alt="" /> */}
         </div>
 
@@ -38,11 +38,11 @@ function Weather({weather, temp, handleSubmit, message, theme, handleTheme }) {
             VIENTO {weather.wind.speed}m/s  
           </div>
           <div>
-            NUBES {weather.clouds.all}%%
+            NUBES {weather.clouds.all}%
           </div>
           
           <div>
-            <h5>PRESIÓN {weather.main.pressure} hPaP </h5>
+            <h5>PRESIÓN {weather.main.pressure}{weather.weather[0].icon}  PaP </h5>
           </div>
           
         </div>
