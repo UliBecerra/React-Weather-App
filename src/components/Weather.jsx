@@ -31,7 +31,13 @@ function Weather({weather, temp, handleSubmit, message, theme, handleTheme }) {
         (weather.weather[0].icon === '02d' || weather.weather[0].icon === '02n') ? (`bg-[url("/public/images/icons/02d.png")]`) :
         (weather.weather[0].icon === '03d' || weather.weather[0].icon === '03n') ? (`bg-[url("/public/images/icons/03d.png")]`) :
         (weather.weather[0].icon === '04d' || weather.weather[0].icon === '04n') ? (`bg-[url("/public/images/icons/04d.png")]`) :
-        (weather.weather[0].icon === '05d' || weather.weather[0].icon === '05n') && (`bg-[url("/public/images/icons/01d.png")]`) )
+        (weather.weather[0].icon === '09d' || weather.weather[0].icon === '09n') ? (`bg-[url("/public/images/icons/09d.png")]`) : 
+        (weather.weather[0].icon === '10d' || weather.weather[0].icon === '10n') ? (`bg-[url("/public/images/icons/10d.png")]`) : 
+        (weather.weather[0].icon === '11d' || weather.weather[0].icon === '11n') ? (`bg-[url("/public/images/icons/11d.png")]`) : 
+        (weather.weather[0].icon === '13d' || weather.weather[0].icon === '13n') ? (`bg-[url("/public/images/icons/13d.png")]`) : 
+        (weather.weather[0].icon === '50d' || weather.weather[0].icon === '50n') && (`bg-[url("/public/images/icons/50d.png")]`) 
+        
+        )
         )
         }>
           {/* <img src={`/public/images/icons/01n.png`} alt="" /> */}
