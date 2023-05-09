@@ -20,7 +20,7 @@ function Weather({weather, temp, handleSubmit, message, theme, handleTheme }) {
       
       
         <div className='capitalize col-start-1 row-start-1 row-end-2 col-end-2 flex  items-center pl-5 pr-3 pt-2'>
-          <h1 className='text-[65px] '>{isCelsius ? temp.celsius : temp.fahrenheit}°</h1>
+          <h1 className='text-[58px] md:text-[65px] '>{isCelsius ? temp.celsius : temp.fahrenheit}°</h1>
         </div>
         
 
